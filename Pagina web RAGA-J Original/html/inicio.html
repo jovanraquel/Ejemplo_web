@@ -1,0 +1,369 @@
+<!-- 
+Pagina principal  
+(20/08/2023)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Cabeza-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Estilos CSS-->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/estilosDivisionParallax.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+  <link rel="stylesheet" href="../css/estilos.css" />
+  <link rel="stylesheet" media="(prefers-color-scheme: light)" href="../css/light.css" />
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="../css/dark.css" />
+  <!-- Icono -->
+  <link rel="icon" type="image/png" href="../imagenes/RAGA-J(Circulo).png" />
+  <!-- dark mode-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <!-- dark mode-->
+  <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+  <!-- boxicons-->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>RAGA-J</title>
+</head>
+<!-- Cuerpo -->
+
+<body>
+  <!-- Menu -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="../imagenes/RAGA-J(Cuadrado).png" alt="Logotipo" id="logo"
+        onclick="mostrarLogotipoEnPantallaCompleta()">
+      RAGA-J
+    </div>
+    <!-- Contenedor del logotipo en pantalla completa -->
+    <div id="logo-en-pantalla-completa" onclick="ocultarLogotipoEnPantallaCompleta()">
+      <img src="../imagenes/RAGA-J(Cuadrado).png" alt="Logotipo">
+    </div>
+    <ul class="nav-links">
+      <li> <a href="#">
+          <img src="../imagenes/Icono 1.png" alt="Icono 1" class="icono-menu">Inicio</a>
+      </li>
+      <li> <a href="#Acerca">
+          <img src="../imagenes/Icono 2.png" alt="Icono 2" class="icono-menu">Acerca</a>
+      </li>
+      <li> <a href="#Servicios">
+          <img src="../imagenes/Icono 3.png" alt="Icono 3" class="icono-menu">Servicios</a>
+      </li>
+      <li> <a href="#Contacto">
+          <img src="../imagenes/Icono 4.png" alt="Icono 4" class="icono-menu">Contacto</a>
+      </li>
+      <!-- modo noche-->
+      <li class="profile">
+        <div class="profile-details">
+          <div class="name_job">
+            <dark-mode-toggle id="dark-mode-toggle-1" appearance="toggle" dark="Dark" light="Light"></dark-mode-toggle>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <!-- Home Section -->
+  <section class="home-section">
+    <!-- Encabezado -->
+    <header>
+      <div class="textos">
+        <h1 class="titulo">RAGA-J</h1>
+        <!-- Titulo -->
+        <h3 class="subtitulo">MIRA A FUTURO</h3>
+        <a href="#" class="boton">Nuevo</a>
+        <i class="bx bx-down-arrow-alt bx-fade-down"></i>
+        <!-- Flecha -->
+        <div id="centrar">
+          <marquee direction="up" behavior="alternate">
+            <h3 class="subtitulo">⇩</h3>
+          </marquee>
+        </div>
+      </div>
+      <div class="sesgoabajo"></div>
+    </header>
+  </section>
+  <!-- Acerca Section -->
+  <section id="Acerca" class="acerca-de">
+    <h2 class="sobre-nosotros"> <span class="neon" id="palabraDestacada2">{</span>Acerca de nosotros</h2>
+    <h3 class="slogan">¡MIRA AL FUTURO!</h3>
+    <p class="parrafo">
+      !Hola¡, Nosostros nos dedicamos al desarrollo tecnologico,
+      principalmete a la creacion de programas.
+      Estamos trabajando en el diseño de viedeojuegos, paginas web,
+      enfocandonos el el hardware y softwarer.
+      Generamos contenido de entretenimiento y enseñanza en conjunto,
+      busca nuestros cursos y asesorias.
+      Mira a futuro y adentrate al campo de la tecnologia.
+    </p>
+    <h4>
+      > Desarrollo de Aplicaciónes para compuradora.<br>
+      > Desarrollo de Paginas web.<br>
+      > Cursos y asesorias.<br>
+      > Desarrollo de tecnologia software y hardware.
+    </h4>
+    <i class="bx bx-down-arrow-alt bx-fade-down"></i>
+  </section>
+  <!-- Imagenes en diagonal Section -->
+  <section class="galeria">
+    <div class="sesgoarriba"></div>
+    <div class="imagenes none">
+      <img src="../imagenes/CNCRouter.jpg" alt="Imagen Diagonal 1" />
+    </div>
+    <div class="imagenes">
+      <img src="../imagenes/Imagen de prueba.png" alt="Imagen Diagonal 2" />
+    </div>
+    <div class="imagenes">
+      <img src="../imagenes/CNCRouter.jpg" alt="Imagen Diagonal 3" />
+      <div class="encima">
+        <!-- Titulo de enmedio -->
+        <h2>RAGA-J</h2>
+      </div>
+    </div>
+    <div class="imagenes">
+      <img src="../imagenes/Imagen de prueba.png" alt="Imagen Diagonal 4" />
+    </div>
+    <div class="imagenes none">
+      <img src="../imagenes/CNCRouter.jpg" alt="Imagen Diagonal 5" />
+    </div>
+    <div class="sesgoabajo"></div>
+  </section>
+  <!-- Servicios Section -->
+  <section id="Servicios" class="servicios">
+    <h2 class="sobre-nosotros"><span class="neon" id="palabraDestacada2">{</span>Servicios</h2>
+    <h3 class="slogan">Mejora tecnologimante tu idea</h3>
+    <div class="cards">
+      <!-- contenedor neon -->
+      <div class="carousel-container">
+        <!-- carrusel de servicios -->
+        <div class="carousel">
+          <div class="slide">
+            <img src="../imagenes/Imagen de prueba.png" alt="Imagen 1" />
+            <div class="slide-content">
+              <h2>Desarrollo</h2>
+              <p>Software y Aplicaciónes</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="../imagenes/Imagen de prueba.png" alt="Imagen 2" />
+            <div class="slide-content">
+              <h2>IDEA</h2>
+              <p>Descripción de la imagen 2.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="../imagenes/Imagen de prueba.png" alt="Imagen 3" />
+            <div class="slide-content">
+              <h2>Cursos y asesorias</h2>
+              <p>Aprendisaje a tu mano</p>
+            </div>
+          </div>
+          <!-- Agregar más imágenes aquí -->
+        </div>
+        <div class="controls">
+          <button class="prev-button">Anterior</button>
+          <button class="next-button">Siguiente</button>
+        </div>
+      </div>
+    </div>
+    <!-- Información de servicios -->
+    <div class="neon-text-titulo">
+      Texto Estilo Neón
+      <div class="neon-text">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
+          fugiat saepe pariatur optio quis reiciendis, nulla repellat
+          consequuntur sit rem modi, officia possimus eius incidunt tenetur
+          deserunt harum. Molestiae, nostrum!
+        </p>
+      </div>
+     </div>
+    </div>
+    <div class="parallax-completo">
+      <div class="parallax-completoo">
+          <div class="parallax-completooo"> 
+          </div>
+      </div>
+  </div>
+  </section>
+  <!-- mision y vision Section -->
+  <section class="acerca-de">
+    <!--Mision y vision-->
+    <h3 class="slogan">Mision</h3>
+    <div id="centrar">
+      <p class="parrafo">
+        Queremos aportar valor y servicio a nuestros clientes para dar solucion
+        a los problemas que se tienen.
+        <span id="palabraDestacada">}</span>
+      </p>
+    </div>
+    <h3 class="slogan">Vision</h3>
+    <div id="centrar">
+      <p class="parrafo">
+        Nos convertiremos un un referente para la tecnologia,
+        ofreciendo los mejores productos y brindando un servicio de excelencia.
+        <span id="palabraDestacada">}</span>
+    </div>
+    </p>
+    <i class="bx bx-down-arrow-alt bx-fade-down"></i>
+  </section>
+  <!-- Carrusel de proyectos realizados Section 2 -->
+  <section class="carrousel">
+    <!--Carrusel de trabajos realizados-->
+    <div class="slider">
+      <ul>
+        <li><img src="../imagenes/Imagen de prueba.png" /></li>
+        <li><img src="../imagenes/Imagen de prueba.png" /></li>
+        <li><img src="../imagenes/Imagen de prueba.png" /></li>
+        <li><img src="../imagenes/Imagen de prueba.png" /></li>
+      </ul>
+    </div>
+  </section>
+  <!--Imagenes de proyectos en general -->
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 1</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 2</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 3</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 4</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 5</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 6</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 7</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 8</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="../imagenes/Imagen de prueba.png" class="gallery-img" />
+      <h2 class="gallery-title">imagen 9</h2>
+    </div>
+  </div>
+  <!-- Mas texto -->
+  <section class="acerca-de">
+    <!--Mision y vision-->
+    <h3 class="slogan">Mision</h3>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Exercitationem dicta rem hic totam necessitatibus tempora animi error
+      perferendis. Vero corrupti porro quia! Ad saepe alias, officiis
+      voluptatem sed, odio dolores neque dolorem placeat nam quia numquam
+      soluta ipsam nostrum consequuntur, a magnam non. Tenetur repudiandae
+      distinctio inventore voluptate fugit laborum?
+    </p>
+    <h3 class="slogan">Vision</h3>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Exercitationem dicta rem hic totam necessitatibus tempora animi error
+      perferendis. Vero corrupti porro quia! Ad saepe alias, officiis
+      voluptatem sed, odio dolores neque dolorem placeat nam quia numquam
+      soluta ipsam nostrum consequuntur, a magnam non. Tenetur repudiandae
+      distinctio inventore voluptate fugit laborum?
+    </p>
+    <i class="bx bx-down-arrow-alt bx-fade-down"></i>
+  </section>
+  <!-- Nuestro software Section -->
+  <section class="fondo">
+    <div class="sesgoarriba"></div>
+    <div class="contenedor">
+      <h2 class="titulo-patrocinadores">Nuestro sistema (software)</h2>
+      <h3 class="subtitulo-patrocinadores">
+        Conoce a algunos de nuestras aplicaciónes
+      </h3>
+    </div>
+    <div class="sesgoabajo"></div>
+  </section>
+  <!-- Contacto Section -->
+  <section>
+    <div id="Contacto" class="contact-container">
+      <h2>Contacto</h2>
+      <p>Si tienes alguna pregunta o comentario, no dudes en contactarnos:</p>
+      <p>Dejanos tus datos y platicamos sobre como podemos ayudarte</p>
+      <form id="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <!--Scripsts JS-->
+  <script src="../js/script.js"></script>
+  <!--Carruzel y contacto -->
+  <script src="../js/main.js"></script>
+  <!-- menu y loader -->
+</body>
+<!-- Pie de pagina -->
+<footer>
+  <div class="footer-container">
+    <div class="logo-footer">
+      <img src="../imagenes/Logo_Raga-j.png" alt="Logotipo">
+    </div>
+    <div class="contact-info">
+      <h3>Contacto</h3>
+      <p>¡Ponte en contacto! Estamos seguros de poder resolver tus problemas de tecnología.</p><br>
+      <p>Correo: contacto@example.com</p>
+      <p>Teléfono: (123) 456-7890</p>
+    </div>
+
+    <div class="useful-links">
+      <h3>Enlaces Útiles</h3>
+      <ul>
+        <li><a href="#">Acerca de nosotros</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+
+    <div class="social-media">
+      <h3>Redes Sociales</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="linea-separadora"></div>
+
+  <div class="copyright">
+    <p>&copy; 2023 RAGA-J. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</html>

@@ -1,0 +1,10 @@
+/*
+    (28/08/2023)
+    Propiedad tema obscuro
+*/
+:root{
+    --background-color: #1d1d1d;
+}
+body{
+    color: aliceblue;
+}

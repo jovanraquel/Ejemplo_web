@@ -1,0 +1,715 @@
+/*
+    28/08/2023)
+    Estilos generales para que las etiquetas no contengan propiedades
+    que nos estorben y en todos los navegadores se vean correctamente
+*/
+
+/*Estilos generales*/
+/* Cuerpo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  font-size: 100%;
+}
+
+/* Menu  section =======================================*/
+
+/* menú */
+.navbar {
+  position: fixed; /* Fijar el menú en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 20px;
+  color: #fff;
+  z-index: 1000; /* Colocar el menú por encima del contenido */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logo {/* logo menu */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4682b4;
+}
+#logo {
+  width: 1.5rem; /* Ajusta el tamaño del logotipo según tus necesidades */
+  margin-right: 3px; /* Añade un pequeño espacio a la derecha de los iconos */ 
+}
+ /* Estilos para el logotipo en pantalla completa */
+ #logo-en-pantalla-completa {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente */
+  z-index: 1; /* Asegura que el contenedor esté por encima del contenido principal */
+}
+
+#logo-en-pantalla-completa img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+ #logo:hover { /* Cambia el cursor al pasar el mouse sobre el logotipo */
+  cursor: pointer;
+  opacity: 0.8; /* Cambia la opacidad al pasar el mouse (puedes ajustar este valor) */
+}
+
+/* botones */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #4682b4;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #4682b4;
+  margin: 3px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilos para los iconos en el menú */
+.icono-menu {
+  width: 1.2rem; /* Ajusta el tamaño de los iconos según tus preferencias */
+  margin-right: 3px; /* Añade un pequeño espacio a la derecha de los iconos */
+}
+
+/* Responsive menu */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+.content {
+  margin-top: 100px; /* Agregar espacio para evitar que el contenido se solape con el menú */
+  padding: 20px;
+}
+
+/* Home section  =======================*/
+.home-section {
+  background-color: var(--background-color);
+}
+.home-section .text {
+  display: inline-block;
+  background-color: var(--background-color);
+}
+/* Parallax*/
+
+/* header*/
+header {
+  width: 100%;
+  height: 650px;
+  background-color: var(--background-color);
+  background-image: url("../imagenes/Fondo.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+header .textos {
+  margin-top: 152px;
+}
+
+header .titulo {
+  font-size: 85px;
+}
+
+header .subtitulo {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+
+header .boton {
+  display: inline-block;
+  padding: 6px;
+  width: 128px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 19px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+}
+
+  /* Agrega una animación al pasar el ratón sobre el botón */
+  .boton:hover {
+    background-color: #b1b5b8;
+  }
+
+  /* Agrega una animación de pulsación al hacer clic en el botón */
+  .boton:active {
+    transform: translateY(2px);
+  }
+
+/* Acerca de section ================================ */
+.acerca-de {
+  background-color: var(--background-color);
+  padding: 2%;
+}
+
+/* Sobre nosotros */
+.acerca-de .sobre-nosotros {
+  display: inline-block;
+  text-align: center;
+  font-size: 56px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.acerca-de .slogan {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.acerca-de .parrafo {
+  margin-bottom: 13px;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 24px;
+}
+
+/* Imagenes en diagonal ============*/
+.galeria {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.imagenes {
+  width: 20%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.encima {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 73, 94, 0.815);
+}
+
+.encima h2 {
+  position: relative;
+  top: 45%;
+  text-align: center;
+  color: #fff;
+}
+
+.encima div {
+  position: relative;
+  display: block;
+  top: 46%;
+  width: 40px;
+  height: 5px;
+  background: #fff;
+  margin: auto;
+}
+
+/* Servicios section ================================ */
+.servicios {
+  background-color: var(--background-color);
+  padding: 2%;
+}
+
+.servicios .sobre-nosotros {
+  font-size: 56px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.servicios .slogan {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Cuadro neon */
+.cards {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cards:hover {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid rgba(42, 162, 209, 0.7);
+  box-shadow: 0px 0px 5px 0 rgba(38, 125, 212, 0.849);
+}
+
+.cards img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+/* Carrusel  Neon*/
+.carousel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.6) saturate(2) contrast(1.5); /* Estilo neón */
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4682b4;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.controls button:hover {
+  background-color: #000;
+  border: 1px solid rgba(42, 162, 209, 0.7);
+  box-shadow: 0px 0px 5px 0 rgba(38, 125, 212, 0.849);
+}
+
+/* Estilo neon texto*/
+.neon-text-titulo {
+  font-family: var(--tipo-principal);
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff; /* Color blanco para el texto */
+  text-shadow: 0 0 10px #4682b4, 0 0 20px #4682b4, 0 0 30px #4682b4; /* Sombra neón */
+}
+.neon-text {
+  font-family: var(--tipo-principal);
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff; /* Color blanco para el texto */
+  text-shadow: 0 0 10px #4682b4, 0 0 20px #4682b4, 0 0 30px #4682b4; /* Sombra neón */
+}
+.neon {
+  font-family: var(--amarillo);
+  font-weight: bold;
+  color: #fff; /* Color blanco para el texto */
+  text-shadow: 0 0 10px #f7f46d, 0 0 20px #f7f46d, 0 0 30px #f7f46d; /* Sombra neón */
+}
+
+
+/* Carrusel Grande section 2 ====================*/
+.carrousel {
+  background-color: var(--blanco);
+  border-radius: 1em;
+  transition: all 0.4s ease;
+  padding: 2em;
+  margin: 2em;
+  overflow: hidden;
+}
+
+/* Slider  o carrusel*/
+.slider {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+.slider img {
+  width: 100%;
+}
+/*Contenedor de imagenes ==================*/
+/* Imagenes */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item {
+  position: relative;
+}
+.gallery-title {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.gallery-item:nth-child(2) {
+  grid-column-start: span 2;
+}
+.gallery-item:nth-child(6) {
+  grid-column-start: span 2;
+}
+.gallery-item:nth-child(9) {
+  grid-column-start: span 2;
+}
+/* divicion con contenido section ==================*/
+
+/* Seccion nuestros clientes */
+.fondo {
+  height: 900px;
+  position: relative;
+  background-image: url("../imagenes/Imagen de prueba.png");
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 130px;
+}
+
+.titulo-patrocinadores,
+.subtitulo-patrocinadores {
+  color: #fff;
+  text-align: center;
+}
+
+.titulo-patrocinadores {
+  font-size: 56px;
+  margin-top: 48px;
+}
+
+.subtitulo-patrocinadores {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 64px;
+}
+
+/* contancto section ==================*/
+
+.contact-container {
+  background-color: var(--background-color);
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4682b4; /* Color neón */
+}
+
+.contact-container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4682b4; /* Color neón */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--blanco); /* Fondo neón oscuro */
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  background-color: var(--blanco); /* Fondo neón más oscuro */
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #4682b4; /* Color neón */
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #4667b4; /* Color neón más oscuro al pasar el mouse */
+  border: 1px solid rgba(42, 162, 209, 0.7);
+  box-shadow: 0px 0px 5px 0 rgba(38, 125, 212, 0.849);
+}
+
+/* Footer section =========================================*/
+footer {
+  background-color: var(--blanco);
+  color: #fff;
+  height: auto;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer a { /* Enalces */
+  color: var(--azul);
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: right;
+  transition: color 0.3s; /* Transición suave del color al pasar el mouse */
+}
+footer a:hover { /* Enalces */
+  color: #ffd700; /* Cambia el color al pasar el mouse */
+}
+
+.contact-info,
+.useful-links,
+.social-media {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.useful-links ul,
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.titulo-footer,
+.subtitulo-footer {
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 56px;
+  text-align: right;
+}
+
+.subtitulo-footer {
+  font-size: 16px;
+  margin-bottom: 64px;
+  text-align: right;
+}
+
+form.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: right;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: inline-block;
+  width: 48%;
+  padding: 13px;
+  border: none;
+  color: #fff;
+  font-family: "open sans";
+  background: rgba(37, 37, 33, 0.7);
+  margin-bottom: 16px;
+  border-top: 5px solid rgba(37, 37, 33, 0.7);
+  text-align: right;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-top: 5px solid rgba(255, 255, 255, 0.7);
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 200px;
+  min-height: 200px;
+  background: rgba(37, 37, 33, 0.7);
+  padding: 13px;
+  border: none;
+  color: #fff;
+  font-family: "open sans";
+  margin-bottom: 16px;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 13px;
+  border: none;
+  color: #fff;
+  background: rgba(37, 37, 33, 0.7);
+  width: 96px;
+}
+
+.linea-separadora {
+  border-top: 1px solid #fff; /* Color y grosor de la línea */
+  margin: 10px 0; /* Espaciado alrededor de la línea */
+}
+
+  .logo-footer img {  /* Estilos para el logotipo en el footer */
+    max-width: 10em; /* Ajusta el tamaño máximo del logotipo */
+    margin-right: 10px; /* Espaciado a la derecha del logotipo */
+    margin-bottom: 10px;
+  }

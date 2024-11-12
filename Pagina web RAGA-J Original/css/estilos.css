@@ -1,0 +1,106 @@
+/*
+    (28/08/2023)
+    Estilo responsive
+*/
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .card {
+    width: 48%;
+  }
+}
+/* Responsive */
+@media screen and (max-width: 610px) {
+  header .textos {
+    margin-top: 130px;
+  }
+
+  header .titulo {
+    font-size: 75px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .imagenes {
+    flex-grow: 1;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .fondo {
+    height: auto;
+  }
+
+  .especial {
+    display: none;
+  }
+
+  .cliente {
+    width: 90%;
+    height: 200px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  header .textos {
+    margin-top: 100px;
+  }
+
+  header .titulo {
+    font-size: 65px;
+  }
+
+  header .subtitulo {
+    font-size: 25px;
+    margin-bottom: 32px;
+  }
+
+  .sobre-nosotros {
+    font-size: 46px;
+  }
+
+  .slogan {
+    font-size: 20px;
+  }
+
+  .titulo-patrocinadores {
+    font-size: 46px;
+  }
+
+  .subtitulo-patrocinadores {
+    font-size: 20px;
+  }
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
